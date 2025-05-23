@@ -48,7 +48,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: test variables
-      if: (github.event_name == 'pull_request')
+        if: (github.event_name == 'pull_request')
         id: stepVar
         env:
           STEP_VAR: "Step level variable"
