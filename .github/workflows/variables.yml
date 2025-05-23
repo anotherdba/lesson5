@@ -28,7 +28,7 @@ jobs:
       -  name:  test status check and format function
          if: ${{ failure() }}
          env:
-          FORMAT_VAR: ${{ format('GitHub {0} {1} {2}'), 'actions','is','awesonme!' ) }}
+          FORMAT_VAR: ${{ format('GitHub {0} {1} {2}', 'actions','is','awesonme!' ) }}
          run: |
           echo "this step runs a special script to cleanup after the failed step"
           echo ${{ env.FORMAT_VAR }}
